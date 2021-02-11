@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            padding: 5px;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
+<h1>FORM USERS</h1>
+<fieldset>
+    <legend>Users Data</legend>
+    <input type="text" id='nama' placeholder="username" oninput="filter()"> <br><br>
+     <input type="text" id='email' placeholder="email" onkeyup="filter()"> - <input type="number" id='max' placeholder="max" onkeyup="filter()"> <br><br>
+    <select onchange="filter()" id='role'>
+     
+    </select> <br> <br>
+    <input type="button" value="Add user" onclick="ADDuser()">
+</fieldset>
+    <fieldset>
+        <legend>User DATA</legend>
+        <table>
+            <tr>
+                <th><input type="text" placeholder="nama" id="inputNama"></th>
+                    <th><input type="number" placeholder="harga" id="inputHarga"></th>
+                    <th>
+                        <select  id="inputCategory">
+                              
+                        </select>
+                    </th>
+                    <th>
+                        <input type="number" placeholder="Stok" id="inputStock">
+                    </th>
+                </tr>
+            </table>
+            <br>
+            <input type="button" value="Input" onclick="inputData()">
+        </fieldset>
+        <br>
+        <input type="button" value="Input" onclick="inputData()">
+    </fieldset>
+    <fieldset>
+        <legend>Tabel Data</legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id='renderData'>
+      
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+</body>
+<script src="./soal3.js"></script>
+</html>
+
+      
